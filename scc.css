@@ -1,0 +1,118 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: radial-gradient(rgb(137, 20, 127),rgb(170, 2, 236));
+}
+.wrapper {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    position: relative;
+
+    width: 210px;
+    height: 260px;
+    
+    transform-style: preserve-3d;
+    animation:rotate 18s linear infinite;
+    
+}
+.slider span{
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 35px;
+    transform: 
+    rotateY(calc(var(--i)*45deg))
+    translateZ(390px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.slider span:nth-child(1){
+    background-image: url(hamster-768x432.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(2) {
+    background-image: url(hamster-768x432.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(3) {
+    background-image: url(8aba5216fb8c41d1bf322622e0e95ed6.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(4) {
+    background-image: url(hamster-768x432.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(5) {
+    background-image: url(hamster-768x432.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(6) {
+    background-image: url(hamster-768x432.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(7) {
+    background-image: url(8aba5216fb8c41d1bf322622e0e95ed6.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider span:nth-child(8) {
+    background-image: url(hamster-768x432.jpg);
+    background-size: 270px 300px;
+    background-position: center;
+}
+.slider-img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 260px;
+    height: 300px;
+
+    margin: auto;
+
+    border-radius: 20px;
+
+    background-image: url(img/изображение_viber_2020-04-02_18-47-15\ \(2\).jpg);
+    background-size: 6cm 8cm;
+    transform: rotateY(0deg) translateZ(0px);
+
+    animation: stopRotate 18s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(1200px)
+        rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1200px)
+        rotateY(360deg);
+    }
+
+}
+@keyframes stopRotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(-360deg);
+    }
+}
